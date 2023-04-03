@@ -4,7 +4,7 @@
  * *_memset - Fills the first n bytes of the memory.
  *
  * @s: A pointer to the memory.
- * @b: constant.
+ * @b: Constant.
  * @n: The number of bytes to be filled.
  *
  * Return: A pointer s.

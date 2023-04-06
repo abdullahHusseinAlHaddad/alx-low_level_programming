@@ -23,7 +23,7 @@ int sqoar(int n, int ro)
 	if (ro * ro == n)
 		return (ro);
 	else if (ro * ro < n)
-		return (sqrt(n, ro + 1));
+		return (sqoar(n, ro + 1));
 	else
 		return (-1);
 }

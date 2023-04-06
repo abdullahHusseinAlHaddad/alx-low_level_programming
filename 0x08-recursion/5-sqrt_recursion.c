@@ -1,5 +1,7 @@
 #include "main.h"
 
+int sqrt(int m, int ro);
+
 /**
  * sqrt - Find square root.
  * @m: The number.

@@ -2,23 +2,22 @@
 
 /**
  * _sqrt_recursion - search for natural square root.
- * @n: The number.
+ * @n: The number is int var.
  * Return: number.
  */
-int sqrt(int m, int ro);
 int _sqrt_recursion(int n)
 {
-	return (square(n, 1));
+	return (sqoar(n, 1));
 }
 
 /**
- * sqrt - Find square root.
- * @m: The number.
- * @ro: The root.
+ * sqoar - Find square root function this is description.
+ * @m: The number is int this is a vareable.
+ * @ro: The root done this a vareable tooo.
  * Return: number.
  */
-
-int sqrt(int m, int ro)
+int sqrt(int m, int ro);
+int sqoar(int m, int ro)
 {
 	if (ro * ro == m)
 		return (ro);

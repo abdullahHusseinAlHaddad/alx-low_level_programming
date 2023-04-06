@@ -3,8 +3,10 @@
 /**
  * _sqrt_recursion - search for natural square root.
  * @n: The number is int var.
+ * @ro: The root.
  * Return: number.
  */
+int sqoar(int n, int ro);
 int _sqrt_recursion(int n)
 {
 	return (sqoar(n, 1));
@@ -12,17 +14,16 @@ int _sqrt_recursion(int n)
 
 /**
  * sqoar - Find square root function this is description.
- * @m: The number is int this is a vareable.
+ * @n: The number is int this is a vareable.
  * @ro: The root done this a vareable tooo.
  * Return: number.
  */
-int sqrt(int m, int ro);
-int sqoar(int m, int ro)
+int sqoar(int n, int ro)
 {
-	if (ro * ro == m)
+	if (ro * ro == n)
 		return (ro);
-	else if (ro * ro < m)
-		return (sqrt(m, ro + 1));
+	else if (ro * ro < n)
+		return (sqrt(n, ro + 1));
 	else
 		return (-1);
 }

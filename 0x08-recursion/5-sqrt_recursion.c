@@ -1,14 +1,12 @@
 #include "main.h"
 
-int sqrt(int m, int ro);
-
 /**
  * sqrt - Find square root.
  * @m: The number.
  * @ro: The root.
  * Return: number.
  */
-
+int sqrt(int m, int ro);
 int sqrt(int m, int ro)
 {
 	if ((ro * ro) == m)

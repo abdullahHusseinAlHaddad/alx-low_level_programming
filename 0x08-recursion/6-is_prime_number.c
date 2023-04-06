@@ -3,12 +3,11 @@
 
 /**
  * is_prime_number - Checks if the number is prime.
- * @n: The number.
+ * @n: The number vareble.
  * @iv: int.
- * @m: a number.
  * Return: number.
  */
-int check(int m, int iv);
+int check(int n, int iv);
 int is_prime_number(int n)
 {
 	return (check(n, 2));
@@ -17,18 +16,17 @@ int is_prime_number(int n)
 
 /**
  * check- Checks if a number is even.
- * @m: The number to be checked.
  * @iv: divisor.
- *
+ * @n: The number.
  * Return: number.
  */
-int check(int m, int iv)
+int check(int n, int iv)
 {
-	if (iv >= m && m > 1)
+	if (iv >= n && n > 1)
 		return (1);
 
-	else if (m % iv == 0 || m <= 1)
+	else if (n % iv == 0 || n <= 1)
 		return (0);
 
-	return (check(m, iv + 1));
+	return (check(n, iv + 1));
 }

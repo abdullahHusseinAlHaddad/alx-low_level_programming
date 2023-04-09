@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strcat - func that Concatenates
+ * *_strcat - func that Concatenates
  *		two string.
  *
  * * @dest: A pointer to the string to be concatenated upon.
@@ -9,7 +9,7 @@
  *
  * Return: A pointer to the destination string @dest.
  */
-char *_strcat(char *dest, const char *src)
+char *_strcat(char *dest,  char *src)
 {
 	int c2, c;
 

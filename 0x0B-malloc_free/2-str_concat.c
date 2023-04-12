@@ -8,9 +8,10 @@
 
 int _srtlen(char *string)
 {
-	int z;
+	int z = 0;
 
-	for (z = 0; string[z] != '\0'; z++)
+	for (; string[z] != '\0'; z++)
+		;
 		return (z);
 }
 /**

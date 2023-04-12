@@ -16,19 +16,19 @@ char *str_concat(char *s1, char *s2)
 		s1 = "\0";
 	if (s2 == NULL)
 		s2 = "\0";
-	ze = stln(s1);
-	ze1 = stln(s2);
-	str = malloc((ze + ze1) * sizeof(char) + 1);
-	if (concat_str == NULL)
+	dex = stln(s1);
+	dex2 = stln(s2);
+	str = malloc((dex + dex2) * sizeof(char) + 1);
+	if (str == NULL)
 		return (NULL);
-	for (n = 0; n <= ze + ze1; n++)
+	for (n = 0; n <= dex + dex2; n++)
 	{
-		if (n < ze)
+		if (n < dex)
 			str[i] = s1[n];
 		else
-			str[n] = s2[n - ze];
+			str[n] = s2[n - dex];
 	}
-	str[i] = '\0';
+	str[n] = '\0';
 	return (str);
 }
 

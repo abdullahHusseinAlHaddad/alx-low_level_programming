@@ -15,7 +15,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (; a < ac; a++, xm++)
-		xm += stln(av[0]);
+		xm += _stln(av[0]);
 
 	st = malloc(sizeof(char) * xm + 1);
 		if (st == 0)
@@ -33,12 +33,12 @@ char *argstostr(int ac, char **av)
 }
 
 /**
- * stln - search about length of string.
+ * _stln - search about length of string.
  * @string: string.
  * Return: integer
  */
 
-int stln(char *string)
+int _stln(char *string)
 {
 	int ze = 0;
 

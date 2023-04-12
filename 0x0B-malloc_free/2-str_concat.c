@@ -1,20 +1,18 @@
 #include "main.h"
-#include <stdlib.h>
 
-/*
- * _stln - length of string
+/**
+ * _srtlen - search about the length of string.
  * @string: string
  * Return: integer
  */
 
-int _stln(char *string)
+int _srtlen(char *string)
 {
 	int z;
 
 	for (z = 0; string[z] != '\0'; z++)
 		return (z);
 }
-
 /**
  * *str_concat - concatenates two strings.
  * @s1: The string number one.
@@ -28,11 +26,11 @@ char *str_concat(char *s1, char *s2)
 	int n, dex, dex2;
 
 	if (s1 == NULL)
-		s1 = "\0";
+		s1 = '\0';
 	if (s2 == NULL)
-		s2 = "\0";
-	dex = _stln(s1);
-	dex2 = _stln(s2);
+		s2 = '\0';
+	dex = _srtlen(s1);
+	dex2 = _srtlen(s2);
 	str = malloc((dex + dex2) * sizeof(char) + 1);
 	if (str == 0)
 		return (0);

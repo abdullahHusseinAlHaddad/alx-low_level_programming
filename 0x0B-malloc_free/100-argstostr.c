@@ -2,11 +2,27 @@
 #include <stdlib.h>
 
 /**
+ * _srtlen - search about the length of string.
+ * @string: string
+ * Return: integer
+ */
+
+int _srtlen(char *string)
+{
+	int z = 0;
+
+	for (; string[z] != '\0'; z++)
+		;
+	return (z);
+}
+
+/**
  * *argstostr - fuction.
  * @ac: number.
  * @av: An array.
  * Return: new string.
  */
+
 char *argstostr(int ac, char **av)
 {
 	char *st;
@@ -30,19 +46,4 @@ char *argstostr(int ac, char **av)
 	}
 	st[tp] = '\0';
 	return (st);
-}
-
-/**
- * _srtlen - search about the length of string.
- * @string: string
- * Return: integer
- */
-
-int _srtlen(char *string)
-{
-	int z = 0;
-
-	for (; string[z] != '\0'; z++)
-		;
-	return (z);
 }

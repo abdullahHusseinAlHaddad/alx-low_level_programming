@@ -27,9 +27,9 @@ char *str_concat(char *s1, char *s2)
 	int n, dex, dex2;
 
 	if (s1 == NULL)
-		s1 = '\0';
+		s1 = "\0";
 	if (s2 == NULL)
-		s2 = '\0';
+		s2 = "\0";
 	dex = _srtlen(s1);
 	dex2 = _srtlen(s2);
 	str = malloc((dex + dex2) * sizeof(char) + 1);

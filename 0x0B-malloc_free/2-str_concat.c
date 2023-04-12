@@ -19,12 +19,12 @@ char *str_concat(char *s1, char *s2)
 	dex = stln(s1);
 	dex2 = stln(s2);
 	str = malloc((dex + dex2) * sizeof(char) + 1);
-	if (str == NULL)
-		return (NULL);
+	if (str == 0)
+		return (0);
 	for (n = 0; n <= dex + dex2; n++)
 	{
 		if (n < dex)
-			str[i] = s1[n];
+			str[n] = s1[n];
 		else
 			str[n] = s2[n - dex];
 	}

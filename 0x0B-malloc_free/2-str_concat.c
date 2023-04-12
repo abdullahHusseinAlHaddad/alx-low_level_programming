@@ -1,12 +1,27 @@
 #include "main.h"
 #include <stdlib.h>
 
+/*
+ * _stln - length of string
+ * @string: string
+ * Return: integer
+ */
+
+int _stln(char *string)
+{
+	int z;
+
+	for (z = 0; string[z] != '\0'; z++)
+		return (z);
+}
+
 /**
  * *str_concat - concatenates two strings.
  * @s1: The string number one.
  * @s2: The string number two.
  * Return: pointeer.
  */
+
 char *str_concat(char *s1, char *s2)
 {
 	char *str;
@@ -30,18 +45,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	str[n] = '\0';
 	return (str);
-}
-
-/*
- * _stln - length of string
- * @string: string
- * Return: integer
- */
-
-int _stln(char *string)
-{
-	int z;
-
-	for (z = 0; string[z] != '\0'; z++)
-		return (z);
 }

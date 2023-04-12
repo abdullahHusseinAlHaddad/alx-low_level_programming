@@ -16,8 +16,8 @@ char *str_concat(char *s1, char *s2)
 		s1 = "\0";
 	if (s2 == NULL)
 		s2 = "\0";
-	dex = stln(s1);
-	dex2 = stln(s2);
+	dex = _stln(s1);
+	dex2 = _stln(s2);
 	str = malloc((dex + dex2) * sizeof(char) + 1);
 	if (str == 0)
 		return (0);
@@ -33,12 +33,12 @@ char *str_concat(char *s1, char *s2)
 }
 
 /*
- * stln - length of string
+ * _stln - length of string
  * @string: string
  * Return: integer
  */
 
-int stln(char *string)
+int _stln(char *string)
 {
 	int z;
 

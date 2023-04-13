@@ -9,6 +9,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *e;
+	char *fil;
 	unsigned int index;
 
 	if (size == 0 || nmemb == 0)
@@ -18,7 +19,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (e == 0)
 		return (NULL);
 
+	fil = e;
 	for (index = 0; index < (size * nmemb); index++)
-		e[index] = '\0';
+		fil[index] = '\0';
 	return (e);
 }

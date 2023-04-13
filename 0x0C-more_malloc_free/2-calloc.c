@@ -13,7 +13,7 @@ char *_oset(char *s, char c, unsigned int by)
 	char *str = s;
 
 	while (by--)
-		*s++ = c;
+		*str++ = c;
 
 	return (str);
 }

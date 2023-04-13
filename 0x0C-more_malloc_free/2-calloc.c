@@ -13,7 +13,7 @@ char *_oset(char *s, char c, unsigned int by)
 	char *str = s;
 
 	while (by--)
-		*str++ = c;
+		*s++ = c;
 
 	return (str);
 }
@@ -27,16 +27,18 @@ char *_oset(char *s, char c, unsigned int by)
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *e;
+	unsigned int index;
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
-
 	e = malloc(sizeof(int) * nmemb);
 
 	if (e == 0)
 		return (NULL);
 
 	_oset(e, 0, sizeof(int) * nmemb);
-	
+
+	for (index = 0; index < (size * nmemb); index++)
+		e[index] = '\0';
 	return (e);
 }

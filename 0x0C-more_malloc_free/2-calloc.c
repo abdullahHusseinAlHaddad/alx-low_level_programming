@@ -2,20 +2,20 @@
 
 /**
  * *_oset - fill memory.
- * @str: pointer.
+ * @s: pointer.
  * @c: constant.
  * @by: bytes
  * Return: string.
  */
 
-char *_oset(char *str, char c, unsigned int by)
+char *_oset(char *s, char c, unsigned int by)
 {
-	char *s = str;
+	char *str = s;
 
 	while (by--)
-		*str++ = c;
+		*s++ = c;
 
-	return (s);
+	return (str);
 }
 
 /**

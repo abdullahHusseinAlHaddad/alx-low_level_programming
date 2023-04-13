@@ -1,24 +1,6 @@
 #include "main.h"
 
 /**
- * *_oset - fill memory.
- * @s: pointer.
- * @c: constant.
- * @by: bytes
- * Return: string.
- */
-
-char *_oset(char *s, char c, unsigned int by)
-{
-	char *str = s;
-
-	while (by--)
-		*s++ = c;
-
-	return (str);
-}
-
-/**
  * *_calloc - function allocates memory for an array.
  * @nmemb: elements.
  * @size: size.
@@ -35,8 +17,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (e == 0)
 		return (NULL);
-
-	_oset(e, 0, sizeof(int) * nmemb);
 
 	for (index = 0; index < (size * nmemb); index++)
 		e[index] = '\0';

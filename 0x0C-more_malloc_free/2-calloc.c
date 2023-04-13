@@ -16,7 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	e = malloc(sizeof(int) * nmemb);
 
-	if (e == 0)
+	if (e == NULL)
 		return (NULL);
 
 	fil = e;

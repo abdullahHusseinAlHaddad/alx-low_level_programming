@@ -9,7 +9,7 @@
 
 int main(int argc, char **argv)
 {
-	int nm, nu, (*op_func)(int, int);
+	int nm, nu, (*oper_func)(int, int);
 
 	if (argc != 4)
 	{
@@ -18,10 +18,10 @@ int main(int argc, char **argv)
 	}
 
 	nm = atoi(argv[1]);
-	op_func = get_op_func(argv[2]);
 	nu = atoi(argv[3]);
 
-	if (!op_func)
+	oper_func = get_op_func(argv[2]);
+	if (!oper_func)
 	{
 		printf("Error\n");
 		exit(99);
@@ -33,6 +33,6 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	printf("%d\n", op_func(nm, nu));
+	printf("%d\n", oper_func(nm, nu));
 	return (0);
 }

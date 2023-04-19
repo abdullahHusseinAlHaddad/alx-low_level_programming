@@ -27,6 +27,6 @@ int main(int argc, char **argv)
 	}
 
 	while (by--)
-		printf("%02hhx%s", *po, by ? " " : "\n");
+		printf("%02hhx%s", *po++, by ? " " : "\n");
 	return (0);
 }

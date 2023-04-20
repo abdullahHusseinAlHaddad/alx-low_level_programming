@@ -19,6 +19,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 	va_start(nums, n);
 	while (dex--)
-		printf("%d%s", va_arg(numbers, int), dex ? (separator ? separator : "") : "\n");
+		printf("%d%s", va_arg(numbers, int),
+				dex ? (separator ? separator : "") : "\n");
 	va_end(numbers);
 }

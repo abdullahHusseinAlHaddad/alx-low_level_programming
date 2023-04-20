@@ -40,7 +40,7 @@ void pri_string(char *sep, va_list arg)
 	char *str;
 
 	str = va_arg(arg, char *);
-	switch((int)(!str))
+	switch ((int)(!str))
 		case 1;
 			str = "(nil)";
 	printf("%s%s", sep, str);

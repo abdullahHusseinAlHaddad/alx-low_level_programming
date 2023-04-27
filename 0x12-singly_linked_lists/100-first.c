@@ -1,6 +1,6 @@
-#include <lists.h>
+#include <stdio.h>
 
-void __attribute__((constructor)) hare(void);
+void _constructor(void) __attribute__ ((constructor));
 
 /**
  * _constructor - writes a string before the main
@@ -8,5 +8,5 @@ void __attribute__((constructor)) hare(void);
 void _constructor(void)
 {
 	printf("You're beat! and yet, you must allow,\n"
-	       "I bore my house upon my back!\n");
+			"I bore my house upon my back!\n");
 }

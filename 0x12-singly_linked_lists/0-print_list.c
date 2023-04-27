@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
- * _strl - to get length of the string.
+ * _strlen - to get length of the string.
  * @str: the string.
  * Return: number of string.
  */
-int _strl(char *str)
+int _strlen(char *str)
 {
 	int count = 0;
 
@@ -28,7 +28,7 @@ size_t print_list(const list_t *h)
 
 	while (h)
 	{
-		printf("[%d] %s\n", _strl(h->len), h->str ? h->str : "(nil)");
+		printf("[%d] %s\n", _strlen(h->len), h->str ? h->str : "(nil)");
 		h = h->next;
 		nod++;
 	}

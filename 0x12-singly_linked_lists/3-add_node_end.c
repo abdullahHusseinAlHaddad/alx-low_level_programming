@@ -8,6 +8,7 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
+	int l;
 	list_t *new = malloc(sizeof(list_t));
 	list_t *no = *head;
 
@@ -21,7 +22,9 @@ list_t *add_node_end(list_t **head, const char *str)
 			free(new);
 			return (NULL);
 		}
-		new->len = _strlen(new->str);
+		for (l = 0; str[l];)
+			l++;
+		new->len = l;
 	}
 	if (no)
 	{

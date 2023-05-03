@@ -1,18 +1,19 @@
 #include "lists.h"
+
 /**
- * print_listint - print lists
- * @h: pointer
+ * print_listint - print lists.
+ * @h: pointer to the first.
  * Return: number.
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t number = 0;
+	size_t nm = 0;
 
 	while (h)
 	{
 		printf("%d\n", h->n);
-		number++;
+		nm++;
 		h = h->next;
 	}
-	return (number);
+	return (nm);
 }

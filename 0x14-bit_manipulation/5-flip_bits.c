@@ -16,7 +16,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	{
 		if (xor & 1ul)
 			i++;
-		xor = xor >>= 1;
+		xor = xor >> 1;
 	}
 	return (i);
 }

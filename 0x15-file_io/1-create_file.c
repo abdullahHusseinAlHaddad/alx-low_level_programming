@@ -1,4 +1,19 @@
 #include "main.h"
+/**
+ * _str - return length.
+ * @tr: string.
+ * Return: number.
+ */
+int _str(char *tr)
+{
+	int j = 0;
+
+	if (!tr)
+		return (0);
+	while (*tr++)
+		j++;
+	return (j);
+}
 
 /**
  * create_file - Creates a file.
@@ -8,21 +23,16 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int o, w, ln = 0;
+	int on;
+	ssize_t byte = 0, ln = _str(text_content);
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
-
-	if (text_content != NULL)
-	{
-		for (ln = 0; text_content[ln];)
-			ln++;
-	}
-	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	w = write(o, text_content, len);
-
-	if (o == -1 || w == -1)
+	on = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_TRUSR | S_IWUSR);
+	if (on == -1)
 		return (-1);
-	close(o);
-	return (1);
+	if (ln)
+		byte = write(on, text_content, ln);
+	close(on);
+	return (byte == ln ? 1 : -1);
 }
